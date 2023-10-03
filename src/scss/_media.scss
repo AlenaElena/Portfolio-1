@@ -96,6 +96,10 @@
       }
     }
   }
+
+  .projects-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -146,6 +150,9 @@
   }
   .select {
     display: block;
+  }
+  .projects-items {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

@@ -596,34 +596,43 @@
             <section class="projects section">
               <div class="projects-filter">
                 <button class="projects-filter__btn active">All</button>
-                <button class="projects-filter__btn">Web design</button>
+                <button class="projects-filter__btn">Web designe</button>
                 <button class="projects-filter__btn">Applications</button>
                 <button class="projects-filter__btn">Web development</button>
               </div>
               <div class="projects-select select">
-                <div class="select__header">
-                  <span class="select__header-current">All</span>
+                <button class="select-top">
+                  <div class="select-top__value">All</div>
                   <svg class="icon">
                     <use
                       xlink:href="images/icon/sprite-icon.svg#chevron-down"
                     ></use>
                   </svg>
-                </div>
-                <div class="select__body">
-                  <div class="select__body-item">All</div>
-                  <div class="select__body-item">Web design</div>
-                  <div class="select__body-item">Applications</div>
-                  <div class="select__body-item">Web development</div>
-                </div>
+                </button>
+                <ul class="select-list">
+                  <li class="select-list__item">
+                    <button class="select-list__btn">All</button>
+                  </li>
+                  <li class="select-list__item">
+                    <button class="select-list__btn">Web designe</button>
+                  </li>
+                  <li class="select-list__item">
+                    <button class="select-list__btn">Applications</button>
+                  </li>
+                  <li class="select-list__item">
+                    <button class="select-list__btn">Web development</button>
+                  </li>
+                </ul>
               </div>
               <div class="projects-items">
-                <div class="projects-item">
+                <div
+                  class="projects-item active"
+                  data-category="web development"
+                >
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-1.jpg"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="finance"
                       />
@@ -639,13 +648,14 @@
                     <div class="projects-item__category">Web development</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div
+                  class="projects-item active"
+                  data-category="web development"
+                >
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-2.png"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="orizon"
                       />
@@ -661,13 +671,11 @@
                     <div class="projects-item__category">Web development</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div class="projects-item active" data-category="web designe">
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-3.jpg"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="fundo"
                       />
@@ -683,13 +691,11 @@
                     <div class="projects-item__category">Web design</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div class="projects-item active" data-category="applications">
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-4.png"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="brawlhalla"
                       />
@@ -705,13 +711,11 @@
                     <div class="projects-item__category">Applications</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div class="projects-item active" data-category="web designe">
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-5.png"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="dsm."
                       />
@@ -727,13 +731,11 @@
                     <div class="projects-item__category">Web design</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div class="projects-item active" data-category="web designe">
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-6.png"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="metaspark"
                       />
@@ -749,13 +751,14 @@
                     <div class="projects-item__category">Web design</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div
+                  class="projects-item active"
+                  data-category="web development"
+                >
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-7.png"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="summary"
                       />
@@ -771,13 +774,11 @@
                     <div class="projects-item__category">Web development</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div class="projects-item active" data-category="applications">
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-8.jpg"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="task manager"
                       />
@@ -793,13 +794,14 @@
                     <div class="projects-item__category">Applications</div>
                   </a>
                 </div>
-                <div class="projects-item">
+                <div
+                  class="projects-item active"
+                  data-category="web development"
+                >
                   <a href="#">
                     <figure class="projects-item__img">
                       <img
                         src="images/project-9.png"
-                        width="260"
-                        height="195"
                         loading="lazy"
                         alt="arrival"
                       />

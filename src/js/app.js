@@ -55,24 +55,49 @@ arrClose.forEach((el) => {
 });
 
 // portfolio select
-const select = function () {
-  const selectItems = document.querySelectorAll('.select__body-item');
-  const selectHeader = document.querySelector('.select__header');
 
-  const selectToggle = function () {
-    this.parentElement.classList.toggle('active');
-  };
-  const selectChoose = function () {
-    const text = this.innerText;
-    const select = this.closest('.select');
-    const currentText = select.querySelector('.select__header-current');
-    currentText.innerText = text;
-    select.classList.remove('active');
-  };
+const selectBox = document.querySelector('.select');
+const select = document.querySelector('.select-top');
+const selectItems = document.querySelectorAll('.select-list__btn');
+const selectValue = document.querySelector('.select-top__value');
+const projectItems = document.querySelectorAll('.projects-filter__btn');
 
-  addEventOnElem(selectHeader, 'click', selectToggle);
-  selectItems.forEach((el) => {
-    addEventOnElem(el, 'click', selectChoose);
-  });
+const filterItems = document.querySelectorAll('.projects-item');
+
+const selectToggle = function () {
+  selectBox.classList.toggle('active');
 };
-select();
+addEventOnElem(select, 'click', selectToggle);
+
+selectItems.forEach((el) => {
+  el.addEventListener('click', function () {
+    let selectedValue = this.textContent.toLowerCase();
+    selectValue.textContent = this.textContent;
+    selectToggle(select);
+    filterFunc(selectedValue);
+  });
+});
+const filterFunc = function (selectedValue) {
+  for (let i = 0; i < filterItems.length; i++) {
+    if (selectedValue === 'all') {
+      filterItems[i].classList.add('active');
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add('active');
+    } else {
+      filterItems[i].classList.remove('active');
+    }
+  }
+};
+
+let lastClickedBtn = projectItems[0];
+for (let i = 0; i < projectItems.length; i++) {
+  projectItems[i].addEventListener('click', function () {
+    let selectedValue = this.textContent.toLowerCase();
+    selectValue.textContent = this.textContent;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove('active');
+    this.classList.add('active');
+    lastClickedBtn = this;
+  });
+}
