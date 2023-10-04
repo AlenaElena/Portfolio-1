@@ -8,7 +8,7 @@
     <!--
     - favicon
   -->
-    <!-- <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" /> -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 
     <!--
     - custom css link
@@ -26,10 +26,6 @@
     />
   </head>
   <body>
-    <!-- <svg class="icon">
-      <use xlink:href="images/icon/sprite-icon.svg#clock"></use>
-    </svg> -->
-
     <main>
       <div class="container wrapper">
         <aside class="sidebar">
@@ -168,7 +164,7 @@
               </li>
             </ul>
           </nav>
-          <article class="about">
+          <article class="about active" data-page="about">
             <header class="header">
               <h2 class="header-title">About Me</h2>
             </header>
@@ -445,7 +441,7 @@
             </section>
           </article>
 
-          <article class="resume">
+          <article class="resume" data-page="resume">
             <header class="header">
               <h2 class="header-title">Resume</h2>
             </header>
@@ -588,12 +584,12 @@
             </section>
           </article>
 
-          <article class="portfolio active">
+          <article class="portfolio" data-page="portfolio">
             <header class="header">
               <h2 class="header-title">Portfolio</h2>
             </header>
 
-            <section class="projects section">
+            <section class="projects">
               <div class="projects-filter">
                 <button class="projects-filter__btn active">All</button>
                 <button class="projects-filter__btn">Web designe</button>
@@ -821,11 +817,11 @@
             </section>
           </article>
 
-          <article class="blog">
+          <article class="blog" data-page="blog">
             <header class="header">
               <h2 class="header-title">Blog</h2>
             </header>
-            <section class="blog-content section">
+            <section class="blog-content">
               <ul class="blog-list">
                 <li class="blog-item card">
                   <a href="#">
@@ -839,9 +835,11 @@
                       />
                     </figure>
                     <div class="blog-info">
-                      <div class="blog-info__top">
-                        <a href="#" class="blog-info__top-link">Design</a>
-                        <a href="#" class="blog-info__top-link">Fab 23, 2024</a>
+                      <div class="blog-info__meta">
+                        <a href="#" class="blog-info__meta-link">Design</a>
+                        <a href="#" class="blog-info__meta-link"
+                          >Fab 23, 2024</a
+                        >
                       </div>
                       <h3 class="blog-info__title">
                         Design conferences in 2025
@@ -865,9 +863,9 @@
                       />
                     </figure>
                     <div class="blog-info">
-                      <div class="blog-info__top">
-                        <a href="#" class="blog-info__top-link">Design</a>
-                        <a href="#" class="blog-info__top-link"
+                      <div class="blog-info__meta">
+                        <a href="#" class="blog-info__meta-link">Design</a>
+                        <a href="#" class="blog-info__meta-link"
                           >March 3, 2024</a
                         >
                       </div>
@@ -893,9 +891,11 @@
                       />
                     </figure>
                     <div class="blog-info">
-                      <div class="blog-info__top">
-                        <a href="#" class="blog-info__top-link">Design</a>
-                        <a href="#" class="blog-info__top-link">Jan 23, 2024</a>
+                      <div class="blog-info__meta">
+                        <a href="#" class="blog-info__meta-link">Design</a>
+                        <a href="#" class="blog-info__meta-link"
+                          >Jan 23, 2024</a
+                        >
                       </div>
                       <h3 class="blog-info__title">Design digest #80</h3>
                       <p class="blog-info__text">
@@ -917,9 +917,9 @@
                       />
                     </figure>
                     <div class="blog-info">
-                      <div class="blog-info__top">
-                        <a href="#" class="blog-info__top-link">Design</a>
-                        <a href="#" class="blog-info__top-link">Apr 3, 2024</a>
+                      <div class="blog-info__meta">
+                        <a href="#" class="blog-info__meta-link">Design</a>
+                        <a href="#" class="blog-info__meta-link">Apr 3, 2024</a>
                       </div>
                       <h3 class="blog-info__title">
                         UI interactions of the week
@@ -943,9 +943,11 @@
                       />
                     </figure>
                     <div class="blog-info">
-                      <div class="blog-info__top">
-                        <a href="#" class="blog-info__top-link">Design</a>
-                        <a href="#" class="blog-info__top-link">Sep 23, 2024</a>
+                      <div class="blog-info__meta">
+                        <a href="#" class="blog-info__meta-link">Design</a>
+                        <a href="#" class="blog-info__meta-link"
+                          >Sep 23, 2024</a
+                        >
                       </div>
                       <h3 class="blog-info__title">
                         The Forgotten Art Of Spacing
@@ -969,9 +971,9 @@
                       />
                     </figure>
                     <div class="blog-info">
-                      <div class="blog-info__top">
-                        <a href="#" class="blog-info__top-link">Design</a>
-                        <a href="#" class="blog-info__top-link">Nov 3, 2024</a>
+                      <div class="blog-info__meta">
+                        <a href="#" class="blog-info__meta-link">Design</a>
+                        <a href="#" class="blog-info__meta-link">Nov 3, 2024</a>
                       </div>
                       <h3 class="blog-info__title">Design Digest #79</h3>
                       <p class="blog-info__text">
@@ -985,15 +987,56 @@
             </section>
           </article>
 
-          <article class="contact">
-            <figure class="contact-map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d812586.7975458412!2d-122.99886314353432!3d37.29117148168459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcae48af93ff5%3A0xb99d8c0aca9f717b!2z0KHQsNC9LdCl0L7RgdC1LCDQmtCw0LvQuNGE0L7RgNC90LjRjywg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1695901738342!5m2!1sru!2sua"
-                width="400"
-                height="300"
-                loading="lazy"
-              ></iframe>
-            </figure>
+          <article class="contact" data-page="contact">
+            <header class="header">
+              <h2 class="header-title">Contact</h2>
+            </header>
+            <section class="contact-wrap">
+              <div class="contact-map">
+                <figure>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d812586.7975458412!2d-122.99886314353432!3d37.29117148168459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcae48af93ff5%3A0xb99d8c0aca9f717b!2z0KHQsNC9LdCl0L7RgdC1LCDQmtCw0LvQuNGE0L7RgNC90LjRjywg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1695901738342!5m2!1sru!2sua"
+                    class="contact-map__iframe"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  ></iframe>
+                </figure>
+              </div>
+              <form action="#" class="contact-form">
+                <h3 class="contact-form__title">Contact Form</h3>
+                <div class="contact-form__inner">
+                  <input
+                    type="text"
+                    class="contact-form__input formInput"
+                    name="fullname"
+                    required
+                    placeholder="Full Name"
+                  />
+                  <input
+                    type="email"
+                    class="contact-form__input formInput"
+                    name="email"
+                    required
+                    placeholder="Email Address"
+                  />
+                </div>
+                <textarea
+                  class="contact-form__textarea formInput"
+                  name="message"
+                  required
+                  placeholder="Your Message"
+                ></textarea>
+                <button class="contact-form__btn" disabled type="submit">
+                  <svg class="icon">
+                    <use
+                      xlink:href="images/icon/sprite-icon.svg#telegram"
+                    ></use>
+                  </svg>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </section>
           </article>
         </div>
       </div>

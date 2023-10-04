@@ -8,7 +8,7 @@ const addEventOnElem = function (elem, type, callback) {
   }
 };
 
-// sidebar open
+// SIDEBAR OPEN
 const sidebarBottom = document.querySelector('.sidebar-bottom');
 const sidebarBtn = document.querySelector('.sidebar-top__btn');
 
@@ -18,7 +18,7 @@ const sidebar = function () {
 };
 addEventOnElem(sidebarBtn, 'click', sidebar);
 
-// Modal window
+// MODAL WINDOW
 const modalItems = document.querySelectorAll('.testimonials-item__inner');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal-container');
@@ -54,8 +54,7 @@ arrClose.forEach((el) => {
   addEventOnElem(el, 'click', testimonialsModalFunc);
 });
 
-// portfolio select
-
+// PORTFOLIO SELECT
 const selectBox = document.querySelector('.select');
 const select = document.querySelector('.select-top');
 const selectItems = document.querySelectorAll('.select-list__btn');
@@ -99,5 +98,38 @@ for (let i = 0; i < projectItems.length; i++) {
     lastClickedBtn.classList.remove('active');
     this.classList.add('active');
     lastClickedBtn = this;
+  });
+}
+
+// CONTACT FORM
+const contactForm = document.querySelector('.contact-form');
+const contactInputs = document.querySelectorAll('.formInput');
+const contactBtn = document.querySelector('.contact-form__btn');
+contactInputs.forEach((el) => {
+  el.addEventListener('input', function () {
+    if (contactForm.checkValidity()) {
+      contactBtn.removeAttribute('disabled');
+    } else {
+      contactBtn.setAttribute('disabled', '');
+    }
+  });
+});
+
+// PAGE NAVIGATIONS
+const navigationLinks = document.querySelectorAll('.nav-item');
+const pages = document.querySelectorAll('[data-page]');
+
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener('click', function () {
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add('active');
+        navigationLinks[i].classList.add('active');
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove('active');
+        navigationLinks[i].classList.remove('active');
+      }
+    }
   });
 }
